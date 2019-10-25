@@ -57,6 +57,9 @@ if ( !defined( 'ABSPATH' ) ) exit;
 								<span><?php echo apply_filters( 'wcdn_order_info_content', $field['value'], $field ); ?></span>
 							</li>
 						<?php endforeach; ?>
+						<li><strong><?php echo "CPF: " . $order->get_meta( '_billing_cpf', true ); ?></strong></li>
+						<li><strong><?php echo "CNPJ: " . $order->get_meta( '_billing_cnpj', true ); ?></strong></li>
+						<li><strong><?php echo "Objetivo: " . $order->get_meta( '_billing_objetivo', true ); ?></strong></li>	
 					</ul>
 					
 					<?php do_action( 'wcdn_after_info', $order ); ?>
